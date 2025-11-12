@@ -1,0 +1,488 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden
+}
+
+.top-navbar {
+    height: 3rem;
+    width: 100%;
+    min-width: 380px;
+    background: #77E64B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 1.2rem;
+
+}
+
+.top-navbar span {
+    font-weight: 600;
+}
+
+.top-navbar button {
+    padding: 9px 30px;
+    background: black;
+    color: #fff;
+    cursor: pointer;
+
+}
+
+.top-navbar button:hover {
+    background: #262626;
+
+}
+
+.navbar {
+    height: 5rem;
+    width: 100%;
+    min-width: 370px;
+    background: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+}
+
+.navbar .logo img {
+    height: 30px;
+
+}
+
+.navbar .menu ul {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+
+}
+
+.navbar .menu ul li {
+    position: relative;
+}
+
+.navbar .menu ul li a {
+    text-decoration: none;
+}
+
+.navbar .menu ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 4px;
+    background: #77E64B;
+    transition: all 0.2s ease;
+}
+
+.navbar .menu ul li:hover::before {
+    width: 100%;
+}
+
+.nav-end img {
+    height: 30px;
+    display: none;
+}
+
+@media(max-width:821px) {
+    .left-side img {
+        height: 10rem !important;
+    }
+
+    .fitness-section {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        
+    }
+
+    .gym1,
+    .gym2 {
+        grid-column: auto !important;
+    }
+}
+
+@media(max-width:700px) {
+    .top-navbar {
+        text-align: center;
+        font-size: 10px;
+        height: 2.5rem;
+    }
+
+    .top-navbar button {
+        display: none;
+    }
+
+    .navbar {
+        height: 4rem;
+    }
+
+    .navbar .logo img {
+        height: 20px;
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        top: 15%;
+        right: 0;
+        width: 100%;
+        background: #77E64B;
+        text-align: center;
+
+    }
+
+    .menu ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+
+
+    }
+
+    .nav-end img {
+        display: block !important;
+    }
+
+    .menu.active {
+        display: block;
+    }
+
+    .hero-section {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .right-side {
+        text-align: center;
+        margin-top: 22rem;
+    }
+
+    .left-side img {
+        height: 12rem !important;
+    }
+
+    .skill-section {
+        padding: 23rem;
+    }
+
+    .skill-container {
+        margin-top: 2rem;
+    }
+
+    .box {
+        border-radius: 10px;
+        width: 80%;
+    }
+
+    .fitness-section {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+       
+    }
+
+    .gym1,
+    .gym2 {
+        grid-column: auto !important;
+        
+    }
+
+
+
+
+
+}
+
+
+
+
+/* Hero Section */
+.hero-section {
+    min-height: 26rem;
+    width: 100%;
+    background: #FFF5ED;
+    display: flex;
+    justify-content: space-around
+}
+
+.right-side {
+    padding: 1rem;
+    margin: 80px 20px;
+    ;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.right-side h1 {
+    font-size: 3rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.left-side img {
+    height: 25rem;
+}
+
+.hero-btn {
+    display: flex;
+    gap: 20px;
+}
+
+.hero-btn button {
+    padding: 10px 40px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+
+}
+
+.one-btn {
+    background: greenyellow;
+}
+
+.one-btn:hover {
+    background: #fff;
+
+}
+
+.sec-btn {
+    background: #fff;
+}
+
+.sec-btn:hover {
+    background: greenyellow;
+
+}
+
+/* skill-section */
+
+.skill-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    grid-auto-rows: 250px;
+    min-height: 100vh;
+    width: 100%;
+    padding: 2rem;
+    gap: 20px;
+    background: #111;
+    min-height: 375px;
+
+
+}
+
+.box {
+
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+    background: rgb(255, 255, 255)
+}
+
+.box:hover {
+    background: #77E64B;
+    cursor: pointer;
+}
+
+.box p {
+    padding: 1rem;
+}
+
+.box img {
+    height: 40px;
+}
+
+.skill-container {
+    text-align: center;
+    background: #111;
+
+}
+
+.skill-container h1 {
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+/* Profile-section */
+.profile-section {
+    min-height: 100vh;
+    width: 100%;
+    background: #111;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-auto-rows: 600px;
+    padding: 2rem;
+    color: #fff;
+
+}
+
+.profile:hover {
+    background: greenyellow;
+    color: #111;
+}
+
+.profile {
+    transition: all 0.6s ease;
+    border-left: 1px solid #545454;
+
+}
+
+.profile-content {
+    height: 30%;
+    width: 100%;
+    padding: 1rem;
+}
+
+.profile-content h1 {
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.profile-pic img {
+    height: 420px;
+    opacity: 0.9
+}
+
+
+.profile-icon {
+    font-size: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.profile-icon .fa-brands {
+    color: white;
+    margin-top: 10px;
+}
+
+.profile:hover .fa-brands {
+    color: black;
+}
+
+/* fitness-section */
+.fitness-container {
+    background: linear-gradient(135deg, #000f33 10%, #00112b 100%);
+
+
+}
+
+.fitness-container h1 {
+    color: #004ffa;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+
+}
+
+.fitness-container p {
+    color: #fff;
+    opacity: 0.8;
+    text-align: center;
+
+}
+
+.fitness-section {
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(135deg, #000f33 10%, #00112b 100%);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 400px;
+    padding: 2rem;
+    color: #fff;
+    gap: 10px;
+
+}
+
+.gym {
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    cursor: pointer;
+
+
+}
+
+.gym1 {
+    grid-column: 1/3
+}
+
+.gym2 {
+    grid-column: 3/5
+}
+
+.gym-pic {
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+}
+
+.gym-pic img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+
+}
+
+.gym:hover img {
+    transform: scale(1.05)
+}
+
+.gym-content h2 {
+    color: #fff;
+    opacity: 0.9;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.gym:hover h2 {
+    color: #67a2ea;
+
+}
+
+.gym-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.gym button {
+    padding: 10px 30px;
+    color: #fff;
+    font-size: 1rem;
+    opacity: 0.9;
+    background: #262626;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+
+}
+
+.gym button:hover {
+    background: #313030;
+
+}
